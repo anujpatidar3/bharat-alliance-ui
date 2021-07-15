@@ -1,0 +1,27 @@
+@import "../../../variable.scss";
+
+.hd-consult-prn{
+    text-align: center;
+}
+.hd-consult-prn h1 {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    color: $black;
+    display: inline-block;
+    vertical-align: baseline;
+    //text-transform: uppercase;
+    margin: 0;
+    font-family: 'Hammersmith One', sans-serif;
+    letter-spacing: -.5px;
+    margin-bottom: 3rem;
+  }
+
+
+
+
+  .form-button{
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+  }

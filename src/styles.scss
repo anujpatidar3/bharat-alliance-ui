@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./variable.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+body {
+  display: block;
+  margin: 0px;
+}
+
+.container-custom {
+  padding-top: 3.5rem;
+}
+
+//button
+.btn-custom {
+  padding: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: transparent;
+  border: 2px solid;
+  border-color: $vl-green;
+  border-radius: 50px;
+  color: $vl-green;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: $black;
+  color: $white;
+  border: 2px solid;
+  border-color: $black;
+}
+
+//input text
+.input-custom-group i {
+  position: absolute;
+}
+
+.input-custom-group {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.icon {
+  padding: 10px;
+  min-width: 50px;
+  text-align: center;
+  font-size: 21px;
+  padding-top: 18px;
+}
+
+input {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #d5d5d5;
+  font-size: 1.5em;
+  padding-left: 50px;
+  box-sizing: border-box;
+}
+
+input:focus-visible {
+  border: 1px solid #d5d5d5;
+}

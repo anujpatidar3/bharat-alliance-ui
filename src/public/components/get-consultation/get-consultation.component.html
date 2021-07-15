@@ -1,0 +1,67 @@
+<div class="consult-prn container">
+    <div class="hd-consult-prn">
+        <h1>Would you like to know more? We'll give you a call.</h1>
+    </div>
+    <div class="consultation-form">
+        <form [formGroup]="form" autocomplete="off">
+            <div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-custom-group">
+                            <i class="fa fa-user icon" aria-hidden="true"></i>
+                            <input maxlength="40" formControlName="name" type="text" name="name" id="name" placeholder="Name:">
+                            <span *ngIf="submitted && f.name.errors">
+                                <span class="text-danger" *ngIf="f.name.errors.required">Name is required</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input-custom-group">
+                            <i class="fa fa-envelope icon" aria-hidden="true"></i>
+                            <input maxlength="40" formControlName="email" type="email" name="email" id="email" placeholder="Email:">
+                            <span *ngIf="submitted && f.email.errors">
+                                <span class="text-danger" *ngIf="f.email.errors.required">Email is required</span>
+                                <span class="text-danger" *ngIf="f.email.errors.email">Email is not valid</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="input-custom-group">
+                            <i class="fa fa-phone icon" aria-hidden="true"></i>
+                            <input maxlength="12" formControlName="mobile" type="text" name="mobile" id="mobile" placeholder="Mobile:">
+                            <span *ngIf="submitted && f.mobile.errors">
+                                <span class="text-danger" *ngIf="f.mobile.errors.required">Mobile is required</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-custom-group">
+                            <i class="fa fa-building icon" aria-hidden="true"></i>
+                            <input formControlName="city" type="text" name="city" id="city" placeholder="City:">
+                            <span *ngIf="submitted && f.city.errors">
+                                <span class="text-danger" *ngIf="f.city.errors.required">City is required</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="input-custom-group">
+                            <i class="fa fa-map-marker icon" aria-hidden="true"></i>
+                            <input maxlength="10" formControlName="zip" type="text" name="zip" id="pincode" placeholder="Pincode:">
+                            <span *ngIf="submitted && f.zip.errors">
+                                <span class="text-danger" *ngIf="f.zip.errors.required">Zip is required</span>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-button">
+                <span>
+                    <button (click)="submit()" type="button" class="btn-custom">Call Me Back!</button>
+                  </span>
+            </div>
+        </form>
+    </div>
+</div>
