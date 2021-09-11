@@ -59,7 +59,7 @@
             </div>
             <div class="form-button">
                 <span>
-                    <button (click)="submit()" type="button" class="btn-custom">Call Me Back!</button>
+                    <button (click)="submit()" type="button" class="btn-custom"><span *ngIf="showButton">Call Me Back!</span> <i *ngIf="!showButton" class="fa fa-spinner" aria-hidden="true"></i></button>
                   </span>
             </div>
         </form>

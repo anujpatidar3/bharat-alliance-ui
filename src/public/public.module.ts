@@ -7,6 +7,8 @@ import { AboutComponent } from './components/about/about.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { GetConsultationComponent } from './components/get-consultation/get-consultation.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { PublicService } from './service/public.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -17,7 +19,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PublicRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    SharedModule
-  ]
+    SharedModule,
+    HttpClientModule
+  ],
+  providers:[PublicService]
 })
 export class PublicModule { }

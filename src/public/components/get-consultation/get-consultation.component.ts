@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-
+import { PublicService } from '../../service/public.service';
 @Component({
   selector: 'app-get-consultation',
   templateUrl: './get-consultation.component.html',
@@ -8,11 +8,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class GetConsultationComponent implements OnInit {
 
+  showButton=true;
+  showError=true;
   form: FormGroup;
   loading = false;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder,) { }
+  constructor(private formBuilder: FormBuilder, private publicService: PublicService) { }
 
   ngOnInit(): void {
     this.initialiseForm();
@@ -20,7 +22,7 @@ export class GetConsultationComponent implements OnInit {
 
   get f() { return this.form.controls; }
 
-  initialiseForm(){
+  initialiseForm() {
     this.form = this.formBuilder.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -29,18 +31,43 @@ export class GetConsultationComponent implements OnInit {
       zip: ['', [Validators.required]]
     });
   }
-  reset(){
-    this.submitted=false;
-    this.loading=false;
+  reset() {
+    this.submitted = false;
+    this.loading = false;
     this.form.reset();
   }
 
-  submit(){
-    this.submitted=true;
-    if(this.form.invalid){
+  submit() {
+    this.submitted = true;
+    if (this.form.invalid) {
       return;
     }
-    console.log(this.form.value)
+    this.showButton=false;
+    const FORMVALUE=this.form.value;
+    const EMAILDATA = {
+      "Name": FORMVALUE.name,
+      "ContactNumber": FORMVALUE.mobile,
+      "Email": FORMVALUE.email,
+      "Address": FORMVALUE.city+'___'+FORMVALUE.zip
+    };
+
+    this.publicService.SendEnquiry(EMAILDATA).subscribe(
+      data => {
+        this.showButton=true;
+        this.form.reset();
+        this.initialiseForm();
+        this.submitted=false;
+      },
+      error => {
+        this.showButton=true;
+        this.form.reset();
+        this.initialiseForm();
+        this.submitted=false;
+      });
+  }
+
+  resetform(){
+    
   }
 
 }
