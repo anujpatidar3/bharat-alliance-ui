@@ -4,8 +4,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  {path:'',redirectTo:'home'},
-  { path: 'home', component: HomeComponent },
+  // {path:'',redirectTo:'home'},
+  { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent },
 ];
 
