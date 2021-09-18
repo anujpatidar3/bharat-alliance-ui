@@ -79,7 +79,7 @@
             <div>
                 <div class="chat-btn icon-h">
                     <div  (click)="showPopUp()">
-                        <i style="margin-left: 3px;margin-right: 3px;" class="fa fa-angle-up icon-contact" aria-hidden="true"></i>
+                        <i style="margin-left: 3px;margin-right: 3px;margin-top: 5px;" class="fa fa-phone icon-contact" aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="chat-popup" id="myForm" [ngClass]="{'show-chat': showChat}">
@@ -89,16 +89,20 @@
                     <form  class="form-container">
                        
                         <div>
-                            <i style="padding-left: 4px;" class="fa fa-whatsapp icon-contact" aria-hidden="true"></i>
+                            <!-- WhatsApp -->
+                            <a href="https://wa.me/917773014824?text=Hi%20Team,%20I%20am%20looking%20for%20some%20information%20related%20to%20the%20kitchen.%20Can%20you%20please%20help%20out?"><i style="padding-left: 4px;" class="fa fa-whatsapp icon-contact" aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
-                            <i class="fa fa-envelope-o icon-contact" aria-hidden="true"></i>
+                            <!-- email -->
+                            <a href="mailto:no-one@snai1mai1.com?subject=Enquiry!!&body=Hi Team, %0D%0A%0D%0A We are looking for some information related to the kitchen. Can you please help out? %0D%0A %0D%0A Please find the details below.%0D%0A %0D%0A Name: %0D%0A Contact: %0D%0A Location: %0D%0A%0D%0A  Thanks" class="col-black"><i class="fa fa-envelope-o icon-contact" aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
-                            <i style="padding-left: 4px;" class="fa fa-volume-control-phone icon-contact" aria-hidden="true"></i>
+                            <!-- phone -->
+                            <a href="tel:+917773014824"><i style="padding-left: 4px;" class="fa fa-volume-control-phone icon-contact" aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
-                            <i class="fa fa-commenting-o icon-contact" aria-hidden="true"></i>
+                            <!-- sms -->
+                            <a href="sms:+917773014824&body=Hi%2520Team,%252C%2520We%2527d%2520are%2520looking%2520for%2520some%2520information%2520related%2520to%2520the%2520kitchen.%2520Can%2520you%2520please%2520help%2520out?"><i class="fa fa-commenting-o icon-contact" aria-hidden="true"></i></a>
                         </div>
                       <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
                     </form>
