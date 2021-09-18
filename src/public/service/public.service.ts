@@ -17,7 +17,16 @@ export class PublicService {
   //     })
   //   });
   // }
+
   SendEnquiry(emailData) {
-    return this.http.post<any>('https://localhost:5001/api/values/SendEmail',emailData);
+    return this.http.post<any>(' https://azum5j2gpj.execute-api.ap-south-1.amazonaws.com/Prod/api/values/sendemail',emailData);
+  }
+
+  // SendEnquiry(emailData) {
+  //   return this.http.post<any>('https://localhost:5001/api/values/SendEmail',emailData);
+  // }
+
+  test() {
+    return this.http.get<any>('https://azum5j2gpj.execute-api.ap-south-1.amazonaws.com/Prod/api/values');
   }
 }

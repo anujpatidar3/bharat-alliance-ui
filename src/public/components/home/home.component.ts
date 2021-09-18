@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  showChat=false;
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  showPopUp(){
+this.showChat=true;
+  }
+
+  hidePopUp(){
+    this.showChat=false;
   }
 
 }

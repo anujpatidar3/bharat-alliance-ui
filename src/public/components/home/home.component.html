@@ -76,6 +76,34 @@
             <div class="consultation">
                 <app-get-consultation></app-get-consultation>
             </div>
+            <div>
+                <div class="chat-btn icon-h">
+                    <div  (click)="showPopUp()">
+                        <i style="margin-left: 3px;margin-right: 3px;" class="fa fa-angle-up icon-contact" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="chat-popup" id="myForm" [ngClass]="{'show-chat': showChat}">
+                    <div class="icon-h" (click)="hidePopUp()">
+                        <i style="margin-left: 17px;" class="fa fa-angle-down icon-contact" aria-hidden="true"></i>
+                    </div>
+                    <form  class="form-container">
+                       
+                        <div>
+                            <i style="padding-left: 4px;" class="fa fa-whatsapp icon-contact" aria-hidden="true"></i>
+                        </div>
+                        <div class="margin-top-i-d">
+                            <i class="fa fa-envelope-o icon-contact" aria-hidden="true"></i>
+                        </div>
+                        <div class="margin-top-i-d">
+                            <i style="padding-left: 4px;" class="fa fa-volume-control-phone icon-contact" aria-hidden="true"></i>
+                        </div>
+                        <div class="margin-top-i-d">
+                            <i class="fa fa-commenting-o icon-contact" aria-hidden="true"></i>
+                        </div>
+                      <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+                    </form>
+                  </div>
+            </div>
             <div class="custom-footer">
                 <app-footer></app-footer>
             </div>

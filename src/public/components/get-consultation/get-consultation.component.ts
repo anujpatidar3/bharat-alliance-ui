@@ -30,6 +30,15 @@ export class GetConsultationComponent implements OnInit {
       city: ['', [Validators.required]],
       zip: ['', [Validators.required]]
     });
+
+
+    this.publicService.test().subscribe(
+      data => {
+        console.log('get api' ,data)
+      },
+      error => {
+       console.log('get api error' ,error)
+      });
   }
   reset() {
     this.submitted = false;
