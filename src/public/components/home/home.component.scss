@@ -13,21 +13,34 @@
   transition: transform 0.6s ease-in-out, -webkit-transform 0.6s ease-in-out;
 }
 
-#main_banner {
-  // content: url(../../../assets/home/banner/R/Banner1.jpg);
-  content: url(../../../assets/home/banner/New/hori.jpg);
-  width: 100%;
+@media only screen and (min-width: 601px) {
+  #main_banner {
+    // content: url(../../../assets/home/banner/R/Banner1.jpg);
+    content: url(../../../assets/home/banner/New/hori.jpg);
+    width: 100%;
+  }
 }
 
 @media only screen and (min-width: 280px) and (max-width: 600px) {
   #main_banner {
     // content: url(../../../assets/home/banner/banner-mob.webp);
-    content: url(../../../assets/home/banner/New/vertical.jpg);
+    // content: ;
+    // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../../../assets/home/banner/1.jpg');
+    // background-size:cover;
+    // background-position: center;
+    //height: 200px;
+    //background-repeat: no-repeat;
     width: 100%;
-    padding: 0.7rem;
+    content: url('../../../assets/home/banner/1.jpg');
   }
 }
 
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  #main_banner_text {
+   width: 100%;
+   content: url('../../../assets/home/banner/1Bannertext.png');
+  }
+}
 
 .active-banner {
   display: block;
@@ -71,13 +84,16 @@
     margin-top: 3.2rem;
   }
 }
-.halloffame{
-margin-top: 5.5rem;
+
+.halloffame {
+  margin-top: 5.5rem;
 }
-.hd-halloffame{
+
+.hd-halloffame {
   text-align: center;
 }
-.hd-halloffame h1{
+
+.hd-halloffame h1 {
   margin-left: 5px;
   margin-right: 5px;
   font-size: 30px;
@@ -90,19 +106,21 @@ margin-top: 5.5rem;
   letter-spacing: -.5px;
   margin-bottom: .5rem;
 }
-.hd-halloffame p{
+
+.hd-halloffame p {
   width: 40%;
-    margin: 16px auto 40px auto;
-    font-size: 0.9rem;
+  margin: 16px auto 40px auto;
+  font-size: 0.9rem;
 }
+
 @media only screen and (max-width: 500px) {
-  .hd-halloffame p{
+  .hd-halloffame p {
     width: 65%;
-      margin: 16px auto 40px auto;
+    margin: 16px auto 40px auto;
   }
 }
 
-.consultation{
+.consultation {
   margin-top: 5rem;
 }
 
@@ -135,7 +153,7 @@ margin-top: 5.5rem;
 .form-container {
   //max-width: 300px;
   padding: 10px;
-  
+
 }
 
 /* Full-width textarea */
@@ -163,7 +181,7 @@ margin-top: 5.5rem;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-bottom:10px;
+  margin-bottom: 10px;
   opacity: 0.8;
 }
 
@@ -173,25 +191,28 @@ margin-top: 5.5rem;
 }
 
 /* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
+.form-container .btn:hover,
+.open-button:hover {
   opacity: 1;
 }
 
-.icon-contact{
+.icon-contact {
   font-size: 35px;
 }
-.margin-top-i-d{
-margin-top: 1rem;
+
+.margin-top-i-d {
+  margin-top: 1rem;
 }
 
-.icon-h{
+.icon-h {
   background-color: $vl-green;
 }
-.show-chat{
+
+.show-chat {
   display: block;
 }
 
-.chat-btn{
+.chat-btn {
   display: none;
   position: fixed;
   bottom: 0;
@@ -203,7 +224,7 @@ margin-top: 1rem;
 }
 
 @media only screen and (min-width: 280px) and (max-width: 600px) {
-  .chat-btn{
+  .chat-btn {
     display: block;
     position: fixed;
     bottom: 0;
@@ -214,6 +235,7 @@ margin-top: 1rem;
     padding: 10px;
   }
 }
-.col-black{
+
+.col-black {
   color: black;
 }

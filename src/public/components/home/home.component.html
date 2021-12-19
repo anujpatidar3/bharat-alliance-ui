@@ -2,11 +2,11 @@
     <div class="banner-img">
         <div class="carousel-item active-banner">
             <img id="main_banner">
+            <img id="main_banner_text">
             <div class="process-step manage-height">
                 <div class="hd-kitchen-type">
                     <h1>Modular Kitchens</h1>
                 </div>
-
                 <div class="container kitchn-type">
                     <div class="row">
                         <div class="col-md">
@@ -78,35 +78,44 @@
             </div>
             <div>
                 <div class="chat-btn icon-h">
-                    <div  (click)="showPopUp()">
-                        <i style="margin-left: 3px;margin-right: 3px;margin-top: 5px;" class="fa fa-phone icon-contact" aria-hidden="true"></i>
+                    <div (click)="showPopUp()">
+                        <i style="margin-left: 3px;margin-right: 3px;margin-top: 5px;" class="fa fa-phone icon-contact"
+                            aria-hidden="true"></i>
                     </div>
                 </div>
                 <div class="chat-popup" id="myForm" [ngClass]="{'show-chat': showChat}">
                     <div class="icon-h" (click)="hidePopUp()">
                         <i style="margin-left: 17px;" class="fa fa-angle-down icon-contact" aria-hidden="true"></i>
                     </div>
-                    <form  class="form-container">
-                       
+                    <form class="form-container">
+
                         <div>
                             <!-- WhatsApp -->
-                            <a class="col-black" href="https://wa.me/917773014824?text=Hi%20Team,%20I%20am%20looking%20for%20some%20information%20related%20to%20the%20kitchen.%20Can%20you%20please%20help%20out?"><i style="padding-left: 4px;" class="fa fa-whatsapp icon-contact" aria-hidden="true"></i></a>
+                            <a class="col-black"
+                                href="https://wa.me/917773014824?text=Hi%20Team,%20I%20am%20looking%20for%20some%20information%20related%20to%20the%20kitchen.%20Can%20you%20please%20help%20out?"><i
+                                    style="padding-left: 4px;" class="fa fa-whatsapp icon-contact"
+                                    aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
                             <!-- email -->
-                            <a class="col-black" href="mailto:no-one@snai1mai1.com?subject=Enquiry!!&body=Hi Team, %0D%0A%0D%0A We are looking for some information related to the kitchen. Can you please help out? %0D%0A %0D%0A Please find the details below.%0D%0A %0D%0A Name: %0D%0A Contact: %0D%0A Location: %0D%0A%0D%0A  Thanks"><i class="fa fa-envelope-o icon-contact" aria-hidden="true"></i></a>
+                            <a class="col-black"
+                                href="mailto:no-one@snai1mai1.com?subject=Enquiry!!&body=Hi Team, %0D%0A%0D%0A We are looking for some information related to the kitchen. Can you please help out? %0D%0A %0D%0A Please find the details below.%0D%0A %0D%0A Name: %0D%0A Contact: %0D%0A Location: %0D%0A%0D%0A  Thanks"><i
+                                    class="fa fa-envelope-o icon-contact" aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
                             <!-- phone -->
-                            <a class="col-black" href="tel:+917773014824"><i style="padding-left: 4px;" class="fa fa-volume-control-phone icon-contact" aria-hidden="true"></i></a>
+                            <a class="col-black" href="tel:+917773014824"><i style="padding-left: 4px;"
+                                    class="fa fa-volume-control-phone icon-contact" aria-hidden="true"></i></a>
                         </div>
                         <div class="margin-top-i-d">
                             <!-- sms -->
-                            <a class="col-black" href="sms:+917773014824?body=Hi%2520Team,%2520We%2520are%2520looking%2520for%2520some%2520information%2520related%2520to%2520the%2520kitchen.%2520Can%2520you%2520please%2520help%2520out?"><i class="fa fa-commenting-o icon-contact" aria-hidden="true"></i></a>
+                            <a class="col-black"
+                                href="sms:+917773014824?body=Hi%2520Team,%2520We%2520are%2520looking%2520for%2520some%2520information%2520related%2520to%2520the%2520kitchen.%2520Can%2520you%2520please%2520help%2520out?"><i
+                                    class="fa fa-commenting-o icon-contact" aria-hidden="true"></i></a>
                         </div>
-                      <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
+                        <!-- <button type="button" class="btn cancel" onclick="closeForm()">Close</button> -->
                     </form>
-                  </div>
+                </div>
             </div>
             <div class="custom-footer">
                 <app-footer></app-footer>
@@ -114,5 +123,5 @@
         </div>
 
     </div>
-   
+
 </div>

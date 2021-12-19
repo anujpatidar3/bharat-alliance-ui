@@ -65,10 +65,18 @@ h2 {
 }
 
 .navbar img {
-  height: 16px;
+  height: 42px;
   width: auto;
   justify-self: start;
-  margin-left: 20px;
+  margin-left: 118px;
+}
+@media only screen and (min-width: 280px) and (max-width: 600px) {
+  .navbar img {
+    height: 42px;
+    width: auto;
+    justify-self: start;
+    margin-left: 20px;
+  }
 }
 
 .navbar ul {
