@@ -9,11 +9,12 @@ import { GetConsultationComponent } from './components/get-consultation/get-cons
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PublicService } from './service/public.service';
 import { HttpClientModule } from '@angular/common/http';
+import { WhyAurraComponent } from './components/why-aurra/why-aurra.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, SliderComponent, GetConsultationComponent],
+  declarations: [HomeComponent, AboutComponent, SliderComponent, GetConsultationComponent, WhyAurraComponent],
   imports: [
     CommonModule,
     PublicRoutingModule,
