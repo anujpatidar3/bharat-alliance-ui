@@ -10,11 +10,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { PublicService } from './service/public.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WhyAurraComponent } from './components/why-aurra/why-aurra.component';
+import { HowitworksComponent } from './components/howitworks/howitworks.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
 
 
 
 @NgModule({
-  declarations: [HomeComponent, AboutComponent, SliderComponent, GetConsultationComponent, WhyAurraComponent],
+  declarations: [HomeComponent, AboutComponent, SliderComponent, GetConsultationComponent, WhyAurraComponent, HowitworksComponent, AboutUsComponent],
   imports: [
     CommonModule,
     PublicRoutingModule,
